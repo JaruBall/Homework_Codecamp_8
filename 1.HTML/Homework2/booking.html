@@ -7,32 +7,122 @@
     <title>Booking</title>
 </head>
 <style>
-   .lastmenu{
-       display: block;
-       background-color: brown;
+    *{
+        box-sizing: border-box;
+    }
+   .box{
+        display: block;
+        background-color: gainsboro;
+        width: 450px;
+        border-radius: 20px;
+        margin: 50px auto;
+        padding: 10px ;
+        
    }
+   .flexbox1{
+       display: flex;
+       box-sizing: border-box;
+       justify-content: center;
+   }
+   .flexbox2{
+       display: inline-block;
+       box-sizing: border-box;
+       width: 100%;
+       text-align: center;
+   }
+   .item{
+       display: inline-block;
+       box-sizing: content-box;
+       width: 150px;
+       margin: 20px 20px 5px 20px;
+   }
+   .item1{
+       display: inline-block;
+       box-sizing: content-box;
+       text-align: start;
+       margin: 10px 20px 5px 20px;
+   }
+
+   .item2{
+       display: inline-block;
+       box-sizing: content-box;
+       text-align: start;
+       margin: 10px;       
+   }
+   label{
+       font-weight: bold;
+   }
+   select {
+            display: block;
+            width: 100%;
+            height: 30px;           
+        }
+    input {
+        display: block;
+        width: 100%;
+        height: 30px;            
+    }
 </style>
 <body>
-    <form>
-            <div>
-                <input type="date">
-                <input type="date"><br><br>
+    <form class="box">
+        <div class="flexbox1">
+            <div class="item">
+                <label for="from">Flying from</label><br>
+                <select name="from" id="from">
+                    <option value="Bangkok">Bangkok</option>
+                    <option value="Hua Hin">Hua Hin</option>
+                    <option value="Khon Kaen">Khon Kaen</option>
+                    <option value="Chiang Mai">Chiang Mai</option>
+                </select>
             </div>
-            <div class="lastmenu">
-                
+            <div class="item">
+                <label for="to">Flying to</label><br>
+                <select name="to" id="to">
+                    <option value="Bangkok">Bangkok</option>
+                    <option value="Hua Hin">Hua Hin</option>
+                    <option value="Khon Kaen">Khon Kaen</option>
+                    <option value="Chiang Mai">Chiang Mai</option>
+                </select>
+            </div> 
+        </div>
+        <div class="flexbox1">
+            <div class="item1">
+                <label for="Departing">Departing</label><br>
+                <input type="date">  
+            </div> 
+            <div class="item1">
+                <label for="Returning">Returning</label><br>
+                <input type="date">  
+            </div>                                   
+        </div>
+        <div class="flexbox2">
+            <div class="item2">
                 <label for="adult">Adult</label><br>
                 <input type="number" min="1" max="10">
-                        
-                <label for="adult">Adult</label><br>
-                <input type="number" name="adult" id="adult" min="1" max="10">
-
-                <label for="adult">Adult</label><br>
-                <input type="number" name="adult" id="adult" min="1" max="10">
-                
             </div>
-           
-           
+            <div class="item2">
+                <label for="Child">Child</label><br>
+                <input type="number" min="1" max="10">
+            </div>  
+            <div class="item2">
+                <label for="Infant">Infant</label><br>
+                <input type="number" min="1" max="10">
+            </div> 
+            <div class="item2">
+                <label for="currency" style="color: coral;">Currency</label><br>
+                <select name="currency" id="currency">
+                    <option value="PKR">PKR</option>
+                    <option value="CNY">CNY</option>
+                    <option value="EUR">EUR</option>
+                    <option value="THB">THB</option>
+                    <option value="USD">USD</option>
+                </select>
+            </div>                    
+        </div>
+        <div style="width: 100px; height: 30px; margin-left: 48px;">
+            <input type="submit" value="SEARCH" style="height: 30px; background-color: orange; font-weight: bold;">
+        </div>                      
     </form>
-    <input type="submit" value="SEARCH">
+    
 </body>
 </html>

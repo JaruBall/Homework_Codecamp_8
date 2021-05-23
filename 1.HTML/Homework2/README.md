@@ -1,7 +1,7 @@
 # Codecamp_8
 
 ### Jaruwat Yaemkong
-### Homework 1
+### HTML Homework 2
 
 1. ให้สร้าง form ชื่อ booking.html โดยมีหน้าตาดังรูป
 
